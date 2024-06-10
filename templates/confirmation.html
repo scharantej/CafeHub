@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Confirmation</title>
+</head>
+<body>
+<h1>Confirmation</h1>
+<ul>
+{% for item, quantity in order.items() %}
+<li>{{ quantity }} x {{ item }} ({{ quantity * menu[item.lower()]['price'] }})</li>
+{% endfor %}
+</ul>
+<p><b>Total:</b> ${{ total }}</p>
+</body>
+</html>
+
