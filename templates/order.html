@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order</title>
+</head>
+<body>
+<h1>Order</h1>
+<form action="/submit-order" method="POST">
+{% for item in menu %}
+<label for="{{ item.name }}">{{ item.name }} ({{ item.price }})</label>
+<input type="number" name="{{ item.name }}" id="{{ item.name }}">
+{% endfor %}
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+
